@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .clearfix::after {
+        content: "";
+        clear: both;
+      }
+      th,
+      td,
+      tr {
+        color: chartreuse;
+      }
+      table,
+      th,
+      td,
+      tr {
+        border: 1px solid;
+        border-color: chartreuse;
+        border-collapse: collapse;
+        background-color: black;
+        text-align: center;
+        margin: auto;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day3: Exercise1</title>
+  </head>
+  <body style="background-color: black">
+    <h1 style="color: chartreuse; text-align: center">TABLE</h1>
+    <table>
+      <tr>
+        <th colspan="2">Header Section</th>
+      </tr>
+      <tr>
+        <td colspan="2">Navigation Bar</td>
+      </tr>
+      <tr>
+        <td style="width: 200px; height 400px">Index</td>
+        <td style="width: 400px; height: 400px">Content Section</td>
+      </tr>
+      <tr>
+        <td colspan="2">Footer Section</td>
+      </tr>
+    </table>
+    <br />
+    <h1 style="color: chartreuse; text-align: center">DIV</h1>
+    <div
+      style="
+        border: 1px solid;
+        border-color: chartreuse;
+        width: 600px;
+        margin: auto;
+        background-color: black;
+      "
+    >
+      <div
+        style="text-align: center; border: 1px solid; border-color: chartreuse"
+      >
+        <p><b style="color: chartreuse">Header Section</b></p>
+      </div>
+      <div
+        style="text-align: center; border: 1px solid; border-color: chartreuse"
+      >
+        <p><b style="color: chartreuse">Navigation Bar</b></p>
+      </div>
+      <div style="border-collapse: collapse; display: flex">
+        <div
+          style="
+            border: 1px solid;
+            border-color: chartreuse;
+            width: 30%;
+            height: 200px;
+            text-align: center;
+            float: left;
+          "
+        >
+          <p><b style="color: chartreuse">Index</b></p>
+        </div>
+        <div
+          style="
+            border: 1px solid;
+            border-color: chartreuse;
+            width: 70%;
+            height: 200px;
+            float: left;
+          "
+        >
+          <p><b style="color: chartreuse">Content Section</b></p>
+        </div>
+      </div>
+
+      <div
+        style="text-align: center; border: 1px solid; border-color: chartreuse"
+      >
+        <p><b style="color: chartreuse">Footer Section</b></p>
+      </div>
+    </div>
+  </body>
+</html>

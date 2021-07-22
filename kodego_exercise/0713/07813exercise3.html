@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .head {
+        font-size: larger;
+        text-align: center;
+        padding: 20px;
+      }
+      .main::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      img {
+        width: 100%;
+        height: 200px;
+      }
+      .img_content {
+        border: 1px solid black;
+        text-align: center;
+        width: 24%;
+        float: left;
+        margin: 5px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .img_content:hover {
+        background-color: aquamarine;
+      }
+      @media only screen and (min-width: 250px) and (max-width: 450px) {
+        .head,
+        .img_content {
+          width: 100%;
+          margin: 0 0;
+        }
+      }
+      @media only screen and (min-width: 451px) and (max-width: 768px) {
+        .head {
+          max-width: 100%;
+        }
+        .main {
+          max-width: 100%;
+          margin-left: 20px;
+        }
+        .img_content {
+          width: 47%;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0713Exercise3</title>
+  </head>
+  <body>
+    <!--HEADER-->
+
+    <div class="head">
+      <h1>TRAVEL GALLERY</h1>
+    </div>
+
+    <!--MAIN-->
+
+    <div class="main">
+      <div class="img_content">
+        <a href="#"
+          ><img src="imburnal.jpg" alt="bestplace1" />
+          <h4>Lorem ipsum</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            quis felis vehicula, congue sem ut, efficitur magna. Maecenas nec
+            lectus non orci posuere semper sed ac magna. Duis at ornare justo.
+            Morbi luctus sapien metus, ac tempus ex dictum sit amet.
+            Pellentesque dictum massa nisi, non accumsan.
+          </p></a
+        >
+      </div>
+      <div class="img_content">
+        <a href="#"
+          ><img src="manila_bay.jpg" alt="bestplace2" />
+          <h4>Lorem ipsum</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            quis felis vehicula, congue sem ut, efficitur magna. Maecenas nec
+            lectus non orci posuere semper sed ac magna. Duis at ornare justo.
+            Morbi luctus sapien metus, ac tempus ex dictum sit amet.
+            Pellentesque dictum massa nisi, non accumsan.
+          </p>
+        </a>
+      </div>
+      <div class="img_content">
+        <a href="#"
+          ><img src="santiago.jpg" alt="bestplace3" />
+          <h4>Lorem ipsum</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            quis felis vehicula, congue sem ut, efficitur magna. Maecenas nec
+            lectus non orci posuere semper sed ac magna. Duis at ornare justo.
+            Morbi luctus sapien metus, ac tempus ex dictum sit amet.
+            Pellentesque dictum massa nisi, non accumsan.
+          </p></a
+        >
+      </div>
+      <div class="img_content">
+        <a href="#"
+          ><img src="guimaras.jpg" alt="bestplace4" />
+          <h4>Lorem ipsum</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            quis felis vehicula, congue sem ut, efficitur magna. Maecenas nec
+            lectus non orci posuere semper sed ac magna. Duis at ornare justo.
+            Morbi luctus sapien metus, ac tempus ex dictum sit amet.
+            Pellentesque dictum massa nisi, non accumsan.
+          </p></a
+        >
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: rgb(247, 242, 173);
+      }
+      h1 {
+        text-align: center;
+        color: black;
+      }
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      table,
+      th,
+      tr,
+      td {
+        padding: 5px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REGISTRATION FORM</title>
+  </head>
+  <body>
+    <h1>REGISTRATION FORM</h1>
+    <form>
+      <table>
+        <tr bgcolor="orange">
+          <td><label for="fname">First Name:</label></td>
+          <td><input type="text" id="fname" name="First Name" /></td>
+        </tr>
+        <tr bgcolor="orange">
+          <td><label for="mname">Middle Name:</label></td>
+          <td><input type="text" id="mname" name="Middle Name" /></td>
+        </tr>
+        <tr bgcolor="orange">
+          <td><label for="lname">Last Name:</label></td>
+          <td><input type="text" id="lname" name="Last Name" /></td>
+        </tr>
+        <tr bgcolor="orange">
+          <td><label for="address">Address:</label></td>
+          <td>
+            <textarea name="Address" id="address" cols="30" rows="3"></textarea>
+          </td>
+        </tr>
+        <tr bgcolor="orange">
+          <td><label for="gender">Gender:</label></td>
+          <td>
+            <input type="radio" id="gender" name="gender" />Male
+            <input type="radio" id="gender" name="gender" />Female
+          </td>
+        </tr>
+        <tr bgcolor="orange">
+          <td><label for="career">Career Path:</label></td>
+          <td>
+            <select name="career" id="career">
+              <option value="Front-end Developer">Front-end Developer</option>
+              <option value="Back-end Developer">Back-end Developer</option>
+              <option value="Full-stack Developer">Full-stack Developer</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr bgcolor="orange">
+          <td><label for="techskills">Technical Skils:</label></td>
+          <td>
+            <input type="checkbox" id="techskills" name="HTML" />HTML
+            <br />
+            <input type="checkbox" id="techskills" name="CSS" />CSS
+            <br />
+            <input
+              type="checkbox"
+              id="techskills"
+              name="JavaScript"
+            />JavaScript
+            <br />
+            <input type="checkbox" id="techskills" name="MySQL" />MySQL
+            <br />
+            <input type="checkbox" id="techskills" name="PHP" />PHP
+            <br />
+            <input type="checkbox" id="techskills" name="Laravel" />Laravel
+            <br />
+            <input type="checkbox" id="techskills" name="React JS" />React JS
+          </td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Submit" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

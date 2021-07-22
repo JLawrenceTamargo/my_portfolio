@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        border: 0;
+        margin: 0;
+      }
+      body {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "nav article aside"
+          "footer footer footer";
+        grid-template-rows: 80px 1fr 70px;
+        grid-template-columns: 20% 1fr 20%;
+        grid-row-gap: 5px;
+        grid-column-gap: 5px;
+        height: 100vh;
+        background-color: lightyellow;
+      }
+      header,
+      nav,
+      article,
+      aside,
+      footer {
+        padding: 10px;
+        text-align: center;
+      }
+      header {
+        grid-area: header;
+      }
+      nav {
+        grid-area: nav;
+      }
+      article {
+        grid-area: article;
+      }
+      aside {
+        grid-area: aside;
+      }
+      footer {
+        grid-area: footer;
+      }
+      @media all and (max-width: 575px) {
+        body {
+          grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "aside"
+            "footer";
+          grid-template-rows: 80px 1fr 70px 1fr 70px;
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adobo Layout</title>
+  </head>
+  <body>
+    <header>header</header>
+    <nav class="grid-item1">navigation</nav>
+    <article class="grid-item2">article</article>
+    <aside class="grid-item3">aside</aside>
+    <footer>footer</footer>
+  </body>
+</html>

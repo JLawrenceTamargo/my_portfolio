@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header,
+footer {
+  background-color: lightgreen;
+  height: 20vh;
+}
+header,
+footer,
+aside,
+article,
+nav {
+  padding: 50px;
+}
+.container {
+  display: flex;
+  height: 60vh;
+}
+.container > nav,
+.container > aside {
+  background-color: beige;
+  flex: 1;
+}
+.container > nav {
+  order: -1;
+}
+.container > article {
+  flex: 3 0 50%;
+}
+@media screen and (max-width: 675px) {
+  .container {
+    flex-direction: column;
+    flex: 1;
+  }
+}

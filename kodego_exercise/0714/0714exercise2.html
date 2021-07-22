@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="0714E2.css" />
+    <title>Avocado layout3</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header><h1>HEADER</h1></header>
+    <!--Container-->
+    <div class="container">
+      <article>
+        <h1>Article</h1>
+        <!--Form-->
+        <form>
+          <div class="form-container">
+            <!--smol-Form-->
+            <div class="form-smolcontainer">
+              <!--Form Info-->
+              <div class="info">
+                <div class="dikit">
+                  <label for="name">Name:</label
+                  ><input type="text" name="name" />
+                </div>
+                <div class="dikit">
+                  <label for="phone">Phone:</label
+                  ><input type="text" name="phone" />
+                </div>
+                <div class="dikit">
+                  <label for="email">Email:</label
+                  ><input type="text" name="email" />
+                </div>
+                <div class="dikit">
+                  <label for="date">Pickup Date/Time:</label
+                  ><input type="datetime-local" />
+                </div>
+                <div class="dikit">
+                  <label for="pick">Pick-up Place:</label>
+                  <select name="default" id="selection">
+                    <option value="Select One">Select One</option>
+                    <option value="Option2">Option2</option>
+                  </select>
+                </div>
+                <div class="dikit">
+                  <label for="dropoff">Dropoff Place:</label
+                  ><input type="text" name="dropoff" />
+                </div>
+              </div>
+              <!--Form Question-->
+              <div class="question">
+                <label>Which vehicle do you require?</label>
+                <div class="dikit">
+                  <input type="radio" name="vehicle" value="Van" /><label
+                    >Van</label
+                  >
+                </div>
+                <div class="dikit">
+                  <input type="radio" name="vehicle" value="Jeepney" /><label
+                    for="vehicle"
+                    >Jeepney</label
+                  >
+                </div>
+                <div class="dikit">
+                  <input type="radio" name="vehicle" value="Tricycle" /><label
+                    for="vehicle"
+                    >Tricycle</label
+                  >
+                </div>
+                <label>Extras</label>
+                <div class="dikit">
+                  <input type="checkbox" name="extra" value="Baby Seat" /><label
+                    >Baby Seat</label
+                  >
+                </div>
+                <div class="dikit">
+                  <input
+                    type="checkbox"
+                    name="extra"
+                    value="Wheelchair Access"
+                  /><label>Wheelchair Access</label>
+                </div>
+                <div class="dikit">
+                  <input type="checkbox" name="extra" value="Stock Tip" /><label
+                    >Stock Tip</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="submit">
+            <input type="submit" value="submit" />
+          </div>
+        </form>
+        <!--Submit-->
+      </article>
+      <aside>
+        <h1>ASIDE</h1>
+      </aside>
+      <nav>
+        <h1>NAV</h1>
+      </nav>
+    </div>
+    <!--Footer-->
+    <footer><h1>FOOTER</h1></footer>
+  </body>
+</html>

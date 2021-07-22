@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100vh;
+  width: 100%;
+  margin: 0%;
+}
+header,
+footer {
+  display: flex;
+  background-color: rgb(240, 128, 147);
+  height: 20vh;
+  width: 100%;
+  flex: 1;
+  margin: 0%;
+}
+.container {
+  display: flex;
+  flex: 5;
+  flex-flow: row wrap;
+  height: 60vh;
+  width: 100%;
+  margin: 0%;
+}
+article {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+}
+aside,
+nav {
+  display: none;
+  flex: 1;
+  background-color: lightpink;
+}
+form {
+  background-color: beige;
+  margin: 5px;
+}
+.form-container {
+  margin: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.question,
+.info {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 2px;
+}
+.submit input {
+  flex-basis: 10%;
+  padding: 5px;
+}
+.dikit {
+  display: flex;
+  flex-direction: row;
+  margin: 2px;
+}
+.info input {
+  flex-basis: 100%;
+  margin: 3px;
+}
+@media (min-width: 768px) {
+  nav,
+  aside {
+    display: unset;
+    flex: 0.5;
+  }
+  .container {
+    flex: 3;
+  }
+  form {
+    margin: 30px;
+    margin-top: -5px;
+  }
+  .form-smolcontainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 3;
+  }
+  .dikit {
+    margin: 5px;
+  }
+  header {
+    order: -2;
+  }
+  .container {
+    order: -1;
+  }
+  nav {
+    order: 1;
+  }
+  aside {
+    order: 0;
+  }
+  footer {
+    order: 2;
+  }
+}

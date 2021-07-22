@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row m-5">
+        <div class="col">
+          <h3>Algorithm</h3>
+          <ol>
+            <li>Patient enters clinic.</li>
+            <li>
+              Patient info and purpose for visit is taken by receptionist and
+              checks the records, If patient has no records in clinic, create
+              new record and save in database. Then give queue number to
+              patient.
+            </li>
+            <li>
+              Patient waits until provided queue number is called. If called
+              proceed to doctor/attending physician for checkup.
+            </li>
+            <li>
+              Patient receives summary of checkup, diagnosis and doctor's
+              prescription.
+            </li>
+            <li>Patient pays for the fees and leaves.</li>
+          </ol>
+        </div>
+        <div class="col">
+          <h3>Pseudocode</h3>
+          <ul>
+            <li>BEGIN patient arrives for clinical care</li>
+            <li>
+              INPUT patient gives personal information and purpose for visit
+            </li>
+            <ul>
+              <li>
+                IF patient given info has a match in database proceed to queue
+              </li>
+              <li>ELSE submit personal information to database for record</li>
+              <li>THEN give queue number</li>
+              <li>ENDIF</li>
+            </ul>
+            <li>OUTPUT queue number</li>
+            <ul>
+              <li>IF queue number called proceed to checkup</li>
+              <li>ELSE wait for number to be called</li>
+              <li>REPEAT UNTIL number is called.</li>
+              <li>ENDIF</li>
+            </ul>
+            <li>INPUT doctor/physician conducts checkup</li>
+            <li>OUPUT patient receives diagnosis and prescription.</li>
+            <li>INPUT patient pays for the fees</li>
+            <li>
+              OUTPUT patient receives receipt for payment and leaves clinic
+            </li>
+            <li>END</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-5">
+          <a href="clinicalcare.html" class="btn btn-primary" role="button"
+            >Return</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

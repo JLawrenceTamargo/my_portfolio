@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .header {
+        background-color: lightgreen;
+        padding: 10px 10px;
+        text-align: center;
+      }
+      .main::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .nav {
+        background-color: black;
+        padding: 10px 10px;
+      }
+      .nav a {
+        padding: 10px;
+        text-decoration: none;
+        color: whitesmoke;
+      }
+      a:hover {
+        background-color: whitesmoke;
+        color: black;
+      }
+      .col {
+        border: 1px solid;
+        width: 33.33%;
+        padding: 15px;
+        float: left;
+      }
+      #lifestyle:hover,
+      #business:hover,
+      #sports:hover {
+        background-color: lightgreen;
+      }
+      .footer {
+        border: 0;
+        text-align: center;
+        color: whitesmoke;
+        background-color: black;
+        padding: 10px;
+      }
+      @media only screen and (min-width: 250px) and (max-width: 540px) {
+        /* For mobile phones: */
+        .header,
+        .main,
+        .nav,
+        .col {
+          width: 100%;
+          text-align: center;
+        }
+        .col p {
+          text-align: justify;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0713Exercise2</title>
+  </head>
+  <body>
+    <!--header-->
+    <div class="header">
+      <h1>Online Magazine</h1>
+    </div>
+    <!--navigation-->
+    <div class="nav">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <!--main-->
+    <div class="main">
+      <div class="col" id="lifestyle">
+        <h2>Lifestyle</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          suscipit venenatis justo, non lobortis odio suscipit ac. Integer
+          pharetra sit amet nulla eget scelerisque. Proin viverra pharetra enim.
+          Nunc vitae molestie est. Quisque tincidunt ex ut diam euismod, a
+          aliquet tortor bibendum. Morbi sed tellus in nunc aliquet tempus.
+          Vestibulum ullamcorper purus turpis, vel fermentum risus congue
+          porttitor. Duis id nibh non nibh finibus feugiat sed in augue. Aliquam
+          volutpat justo vulputate ante vehicula lacinia. Maecenas consequat
+          laoreet dui ut pellentesque. Mauris dictum sollicitudin dignissim. Nam
+          consectetur tellus non leo interdum elementum. Duis euismod eget quam
+          vulputate consequat.
+        </p>
+      </div>
+      <div class="col" id="business">
+        <h2>Business</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          suscipit venenatis justo, non lobortis odio suscipit ac. Integer
+          pharetra sit amet nulla eget scelerisque. Proin viverra pharetra enim.
+          Nunc vitae molestie est. Quisque tincidunt ex ut diam euismod, a
+          aliquet tortor bibendum. Morbi sed tellus in nunc aliquet tempus.
+          Vestibulum ullamcorper purus turpis, vel fermentum risus congue
+          porttitor. Duis id nibh non nibh finibus feugiat sed in augue. Aliquam
+          volutpat justo vulputate ante vehicula lacinia. Maecenas consequat
+          laoreet dui ut pellentesque. Mauris dictum sollicitudin dignissim. Nam
+          consectetur tellus non leo interdum elementum. Duis euismod eget quam
+          vulputate consequat.
+        </p>
+      </div>
+      <div class="col" id="sports">
+        <h2>Sports</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+          suscipit venenatis justo, non lobortis odio suscipit ac. Integer
+          pharetra sit amet nulla eget scelerisque. Proin viverra pharetra enim.
+          Nunc vitae molestie est. Quisque tincidunt ex ut diam euismod, a
+          aliquet tortor bibendum. Morbi sed tellus in nunc aliquet tempus.
+          Vestibulum ullamcorper purus turpis, vel fermentum risus congue
+          porttitor. Duis id nibh non nibh finibus feugiat sed in augue. Aliquam
+          volutpat justo vulputate ante vehicula lacinia. Maecenas consequat
+          laoreet dui ut pellentesque. Mauris dictum sollicitudin dignissim. Nam
+          consectetur tellus non leo interdum elementum. Duis euismod eget quam
+          vulputate consequat.
+        </p>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+      <p>Copyright. All rights reserved.</p>
+    </div>
+  </body>
+</html>
