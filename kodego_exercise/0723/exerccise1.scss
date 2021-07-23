@@ -1,0 +1,97 @@
+$color: grey;
+$puti: white;
+$stylenone: none;
+$vsize: 10vh;
+$pad: 10px;
+$sentro: center;
+$size: large;
+
+@mixin pic($x, $y, $bwidth, $bstyle, $bcolor) {
+  width: $x;
+  height: $y;
+  border-width: $bwidth;
+  border-style: $bstyle;
+  border-color: $bcolor;
+}
+
+.pic {
+  @include pic(100px, 60px, 2px, solid, white);
+  margin: $pad;
+  color: $puti;
+  text-align: $sentro;
+  font-size: $size;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+
+header {
+  background-color: $color;
+  height: $vsize;
+}
+
+@mixin navbar($p, $m, $tdec, $tcolor) {
+  padding: $p;
+  margin: $m;
+  text-decoration: $tdec;
+  color: $tcolor;
+}
+
+nav {
+  display: grid;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: $pad;
+  a {
+    @include navbar(10px, 5px, none, $puti);
+    font-size: $size;
+    &:hover {
+      color: $color;
+      background-color: $puti;
+    }
+  }
+}
+
+@mixin parte($bgcolor, $taas, $self) {
+  background-color: $bgcolor;
+  height: $taas;
+  align-items: $self;
+}
+
+.parte {
+  display: grid;
+  @include parte($color, 70vh, $sentro);
+  h1 {
+    text-align: $sentro;
+  }
+}
+
+$space: 20px;
+
+.lagayan {
+  display: grid;
+  grid-gap: $space;
+  margin-top: $space;
+  grid-template-columns: 3fr 1fr;
+}
+
+.paa {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-content: $sentro;
+  margin-top: $space;
+  background-color: $color;
+  height: $vsize;
+  p {
+    align-self: $sentro;
+    font-size: $size;
+    color: $puti;
+    margin-left: $pad;
+  }
+  h1 {
+    text-align: $sentro;
+  }
+}

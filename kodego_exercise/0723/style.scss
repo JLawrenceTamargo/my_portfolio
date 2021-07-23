@@ -70,7 +70,7 @@ nav {
     margin: 1px;
     padding: 1px;
     border: 2px solid lightsalmon;
-    background-color: magenta;
+    background-color: coral;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -78,6 +78,10 @@ nav {
   li {
     float: left;
     border-right: 2px solid $primarycolor;
+
+    &:hover {
+      background-color: $fillcolor;
+    }
   }
   a {
     display: block;
@@ -88,4 +92,42 @@ nav {
       color: coral;
     }
   }
+}
+
+//Mixin
+
+@mixin headline($color, $size) {
+  color: $color;
+  font-size: $size;
+}
+
+.headline-news1 {
+  @include headline(green, 3em);
+}
+.headline-news2 {
+  @include headline(blue, 2em);
+}
+.headline-news3 {
+  @include headline(red, 2em);
+}
+
+//Mixin Sample 2
+$boxstyle1: 5px, solid, red, 20px;
+$boxstyle2: (
+  bstyle: dotted,
+  bcolor: blue,
+  bwidth: medium,
+  bradius: 20px,
+);
+@mixin boxy($bwidth, $bstyle, $bcolor, $bradius) {
+  border-width: $bwidth;
+  border-style: $bstyle;
+  border-color: $bcolor;
+  border-radius: $bradius;
+}
+.box1 {
+  @include boxy($boxstyle1...);
+}
+.box2 {
+  @include boxy($boxstyle2...);
 }
