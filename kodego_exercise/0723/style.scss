@@ -1,0 +1,91 @@
+// Example variable 1 //
+$mycolor: blue;
+$space: 10px;
+.wrap p {
+  margin: $space;
+  padding: $space;
+}
+.p-border {
+  border: dotted 3px $mycolor;
+}
+.p-background {
+  background-color: rgba($mycolor, 0.3);
+}
+.p-color {
+  color: $mycolor;
+}
+// Example variable 2 //
+$bodycolor: lightblue;
+$primarycolor: darkblue;
+$footer: yellow;
+$fontstock: arial;
+
+body {
+  background: $bodycolor;
+}
+header {
+  color: $primarycolor;
+}
+
+// Nesting //
+$fillcolor: lightgrey;
+$tr-bgcolor: lightgreen;
+
+.sample-nest {
+  p {
+    background: $fillcolor;
+
+    a {
+      &:hover {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+      }
+    }
+  }
+  table {
+    border: 2px solid $primarycolor;
+    width: 100%;
+
+    tr {
+      &:nth-child(2n) {
+        background-color: $tr-bgcolor;
+        padding: 6px 6px;
+      }
+    }
+
+    th {
+      font: $fontstock;
+      color: $primarycolor;
+      font-size: large;
+    }
+  }
+}
+
+//Nesting 2
+
+nav {
+  ul {
+    list-style: none;
+    margin: 1px;
+    padding: 1px;
+    border: 2px solid lightsalmon;
+    background-color: magenta;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  li {
+    float: left;
+    border-right: 2px solid $primarycolor;
+  }
+  a {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: underline;
+
+    &:hover {
+      color: coral;
+    }
+  }
+}
