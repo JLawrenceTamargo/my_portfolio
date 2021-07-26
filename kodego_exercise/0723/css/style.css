@@ -107,3 +107,36 @@ nav a:hover {
   border-color: blue;
   border-radius: 20px;
 }
+
+.boxheavy {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  border: 6px solid black;
+}
+
+.boxmedium {
+  width: 150px;
+  height: 150px;
+  background-color: teal;
+  border: 3px solid black;
+}
+
+.boxlight {
+  width: 150px;
+  height: 150px;
+  background-color: pink;
+  border: 1px solid black;
+}
+
+.coloring.pink {
+  background-color: pink;
+}
+
+.coloring.red {
+  background-color: red;
+}
+
+.coloring.orange {
+  background-color: orange;
+}

@@ -131,3 +131,56 @@ $boxstyle2: (
 .box2 {
   @include boxy($boxstyle2...);
 }
+
+// If Else Example
+
+$light: 1px solid black;
+$medium: 3px solid black;
+$heavy: 6px solid black;
+
+@mixin border-stroke($val) {
+  @if $val==light {
+    border: $light;
+  } @else if $val==medium {
+    border: $medium;
+  } @else {
+    border: $heavy;
+  }
+}
+
+.boxheavy {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  @include border-stroke(heavy);
+}
+
+.boxmedium {
+  width: 150px;
+  height: 150px;
+  background-color: teal;
+  @include border-stroke(medium);
+}
+
+.boxlight {
+  width: 150px;
+  height: 150px;
+  background-color: pink;
+  @include border-stroke(light);
+}
+
+//Each Example
+
+$themecolors: (
+  "pink": pink,
+  "red": red,
+  "orange": orange,
+);
+
+@each $tcolor, $i in $themecolors {
+  .coloring {
+    &.#{$tcolor} {
+      background-color: $i;
+    }
+  }
+}
