@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>My First Javascript</h1>
+    <h3>You can declare many variables in one statement</h3>
+
+    <script>
+      var person = "Jose Rizal",
+        age = "30",
+        birthplace = "Laguna";
+      document.write("<h2><strong>Name: " + person + "<strong></h2>");
+      document.write("<h2><strong>Age: " + age + "<strong></h2>");
+      document.write("<h2><strong>Location: " + birthplace + "<strong></h2>");
+
+      document.write(`<h2><strong>Name: ${person}</h2></strong>`);
+      document.write(`<h2><strong>Age: ${age}</h2></strong>`);
+      document.write(`<h2><strong>Location: ${birthplace}</h2></strong>`);
+
+      let city = "Manila";
+      function showcity() {
+        let city = "Malabon";
+        console.log(city);
+      }
+      showcity(); // the output here is Malabon
+      console.log(city); // the output here is Manila
+    </script>
+  </body>
+</html>
