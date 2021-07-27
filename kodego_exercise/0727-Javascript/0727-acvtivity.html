@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Events</title>
+  </head>
+  <body>
+    <!--This is event samples-->
+
+    <form action="">
+      <input
+        type="button"
+        onclick="alert(`Good morning!`)"
+        value="Click to Greet"
+      />
+      <input type="button" onclick="clickevent()" value="Click for Surprise" />
+
+      <input type="button" onclick="time()" value="Time" />
+    </form>
+    <p id="demo"></p>
+
+    <script>
+      function clickevent() {
+        alert("Bulaga!");
+      }
+
+      function time() {
+        var d = new Date();
+        var n = d.getHours();
+        var m = d.toLocaleTimeString();
+        var greeting;
+        var o;
+
+        if (n > 4 && n < 12) {
+          greeting = "Good Morning!";
+        } else if (n >= 12 && n < 18) {
+          greeting = "Good Afternoon!";
+        } else if (n >= 18 && n < 24) {
+          greeting = "Good Evening!";
+        } else if (n >= 0 && n <= 4) {
+          greeting = "Good Evening!";
+        } else {
+          greeting = "Please Enter a valid hour of day. ex 14";
+        }
+        document.getElementById("demo").innerHTML =
+          " Hello! " + greeting + " The time is " + m + ".";
+      }
+
+      alert(greeting);
+    </script>
+  </body>
+</html>
