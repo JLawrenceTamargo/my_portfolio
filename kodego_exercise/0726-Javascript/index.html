@@ -29,6 +29,49 @@
       }
       showcity(); // the output here is Malabon
       console.log(city); // the output here is Manila
+
+      /*CONSTANT*/
+      const car = { type: "Honda", model: "SUV", color: "blue" };
+      //You can add a property
+      car.owner = `J.Law`;
+
+      //Display the property
+      document.write(car.type + ` car owner is ` + car.owner);
+      document.write(`<h2>${car.type} car owner is ${car.owner}. </h2>`);
+
+      //Example for Conditional
+      var hourofday;
+      var greeting;
+      hourofday = prompt("Enter time: ");
+      if (hourofday > 4 && hourofday < 12) {
+        greeting = "Good Morning!";
+      } else if (hourofday >= 12 && hourofday < 16) {
+        greeting = "Good Afternoon!";
+      } else if (hourofday >= 16 && hourofday < 24) {
+        greeting = "Good Evening!";
+      } else if (hourofday < 4) {
+        greeting = "Kulang ka pa sa tulog.";
+      } else {
+        greeting = "Please Enter a valid hour of day. ex 14";
+      }
+
+      alert(greeting);
+
+      var animal = prompt("Enter animal: ");
+
+      switch (animal) {
+        case "cow":
+        case "dog":
+        case "cat":
+        case "pig":
+          alert(`This animal is not extinct.`);
+          break;
+        case "dinosaur":
+          alert(`This animal is extinct`);
+          break;
+        default:
+          alert("Invalid animal.");
+      }
     </script>
   </body>
 </html>
