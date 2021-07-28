@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator w/JScript</title>
+    <link rel="stylesheet" href="css/calcu.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="compute">
+        <p class="text-muted text-center my-1">
+          <small>-1 braincell per click</small>
+        </p>
+        <input type="text" class="screen rounded-pill m-3" value="" disabled />
+
+        <div class="keys">
+          <button type="button" class="ops rounded-3" value="+">+</button>
+          <button type="button" class="ops rounded-3" value="-">-</button>
+          <button type="button" class="ops rounded-3" value="*">&times;</button>
+          <button type="button" class="ops rounded-3" value="/">
+            &divide;
+          </button>
+
+          <button type="button" class="rounded-circle" value="1">1</button>
+          <button type="button" class="rounded-circle" value="2">2</button>
+          <button type="button" class="rounded-circle" value="3">3</button>
+
+          <button type="button" class="rounded-circle" value="4">4</button>
+          <button type="button" class="rounded-circle" value="5">5</button>
+          <button type="button" class="rounded-circle" value="6">6</button>
+
+          <button type="button" class="rounded-circle" value="7">7</button>
+          <button type="button" class="rounded-circle" value="8">8</button>
+          <button type="button" class="rounded-circle" value="9">9</button>
+
+          <button type="button" class="rounded-circle" value="0">0</button>
+          <button type="button" class="decimal rounded-circle" value=".">
+            .
+          </button>
+          <button type="button" class="delete rounded-3" value="delete">
+            AC
+          </button>
+
+          <button type="button" class="equal-sign ops rounded-3" value="=">
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const compute = {
+        showvalue: "0",
+        first: null,
+        waitingForSecond: false,
+        ops: null,
+      };
+
+      function inputDigit(digit) {
+        const { showvalue, waitingForSecond } = compute;
+
+        if (waitingForSecond === true) {
+          compute.showvalue = digit;
+          compute.waitingForSecond = false;
+        } else {
+          compute.showvalue = showvalue === "0" ? digit : showvalue + digit;
+        }
+
+        console.log(compute);
+      }
+      function inputDecimal(dot) {
+        if (compute.waitingForSecond === true) {
+          compute.showvalue = "0.";
+          compute.waitingForSecond = false;
+          return;
+        }
+        if (!compute.showvalue.includes(dot)) {
+          compute.showvalue += dot;
+        }
+        console.log(compute);
+      }
+
+      function handle(nextOps) {
+        const { first, showvalue, ops } = compute;
+
+        const inputv = parseFloat(showvalue);
+
+        if (ops && compute.waitingForSecond) {
+          compute.ops = nextOps;
+          console.log(compute);
+          return;
+        }
+
+        if (first === null && !isNaN(inputv)) {
+          compute.first = inputv;
+        } else if (ops) {
+          const result = operate(first, inputv, ops);
+
+          compute.showvalue = String(result);
+          compute.first = result;
+        }
+
+        compute.waitingForSecond = true;
+        compute.ops = nextOps;
+        console.log(compute);
+      }
+
+      function operate(first, second, ops) {
+        if (ops === "+") {
+          return first + second;
+        } else if (ops === "-") {
+          return first - second;
+        } else if (ops === "*") {
+          return first * second;
+        } else if (ops === "/") {
+          return first / second;
+        }
+
+        return second;
+      }
+
+      function reset() {
+        compute.showvalue = "0";
+        compute.first = null;
+        compute.waitingForSecond = false;
+        compute.ops = null;
+        console.log(compute);
+      }
+
+      function updateDisplay() {
+        const display = document.querySelector(".screen");
+        display.value = compute.showvalue;
+      }
+
+      updateDisplay();
+
+      const keys = document.querySelector(".keys");
+      keys.addEventListener("click", (event) => {
+        const { target } = event;
+        if (!target.matches("button")) {
+          return;
+        }
+
+        if (target.classList.contains("ops")) {
+          handle(target.value);
+          updateDisplay();
+          return;
+        }
+
+        if (target.classList.contains("decimal")) {
+          inputDecimal(target.value);
+          updateDisplay();
+          return;
+        }
+
+        if (target.classList.contains("delete")) {
+          reset();
+          updateDisplay();
+          return;
+        }
+
+        inputDigit(target.value);
+        updateDisplay();
+      });
+    </script>
+  </body>
+</html>
