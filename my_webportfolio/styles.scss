@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+.bg-navy {
+  background-color: #1c3f60;
+}
+
+.bg-maroon {
+  background-color: #dcf0f2;
+}
+.text-maroon {
+  color: #dcf0f2;
+}
+nav a:hover {
+  background-color: #afc1d0;
+}

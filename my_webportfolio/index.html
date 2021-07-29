@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jhon Lawrence Tamargo</title>
+    <title>Document</title>
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -12,204 +12,86 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body class="bg-maroon">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-maroon">
-      <div class="container">
-        <a class="navbar-brand align-content-center fw-bold" href="index.html">
-          <img src="images/tres_header.png" alt="logo" height="40px" />
-        </a>
-
+  <body data-bs-spy="scroll" data-bs-target="#menuNiLawrence">
+    <nav
+      class="sticky-top navbar navbar-expand-md navbar-light bg-light"
+      id="menuNiLawrence"
+    >
+      <div class="container d-flex justify-items-between">
+        <a class="navbar-brand" href="#home">JLawrence.Tamargo</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="container-fluid">
-            <ul class="navbar-nav justify-content-end fw-bold">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blogs.html">Blogs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacts.html">Contacts</a>
-              </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#project">Projects</a>
+            <a class="nav-link" href="#blog">Blogs</a>
+            <a class="nav-link" href="#contact">Contacts</a>
           </div>
         </div>
       </div>
     </nav>
+    <div class="container-fluid" id="main">
+      <header class="row">
+        <div class="col d-flex justify-content-center">
+          <button onclick="myFunction()" class="lead rounded" id="onetime">
+            <small>Click me.</small>
+          </button>
+        </div>
+        <div class="invisible" id="waahh">
+          <h1 class="text-center py-5">WELCOME</h1>
+          <img
+            src="/images/perfection.png"
+            class="img-fluid"
+            alt="perfection"
+          />
+        </div>
+      </header>
 
-    <!--Header-->
-    <div class="container">
-      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="images/DSC_4302.JPG"
-              class="d-block w-100 resize"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>About Me</h5>
-              <p>
-                A former customer support representative from the BPO industry
-                now a web developer. <br /><a
-                  href="about.html"
-                  class="stretched-link"
-                  >Learn more >></a
-                >
-              </p>
-            </div>
+      <section class="py-5" id="home"></section>
+      <section class="py-5" id="about">
+        <div class="row">
+          <div class="col">
+            <h1>About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
+              lacinia est. Maecenas gravida, lacus ac pulvinar cursus, ipsum
+              sapien dapibus sem, nec pharetra arcu velit at libero. Nulla
+              ultrices eget risus nec congue. Nulla imperdiet sem sed ultrices
+              fringilla. Nulla facilisi. Mauris mattis diam.
+            </p>
           </div>
-          <div class="carousel-item">
-            <img
-              src="images/project.jpg"
-              class="d-block w-100 resize"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>My Projects</h5>
-              <p>
-                A catalog of my current and previous works, projects and
-                experiments with web-design. <br />
-                <a href="#" class="stretched-link">Learn more >></a>
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="images/computer.jpg"
-              class="d-block w-100 resize"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Blog Updates</h5>
-              <p>
-                Get a glimpse of what I've been up to. <br />
-                <a href="#" class="stretched-link">Learn more >></a>
-              </p>
-            </div>
+          <div class="col">
+            <img src="" alt="" />
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+      </section>
+      <section id="project"></section>
+      <section id="blog"></section>
+      <section id="contact"></section>
     </div>
-
-    <!--Main-->
-    <div class="container mt-md-5">
-      <div class="row row-cols-1 row-cols-md-3">
-        <div class="col">
-          <div class="card bg-maroon border-0">
-            <img src="images/tres_v2.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">My very first logo design</h5>
-              <p class="card-text">
-                I spent hours trying to make a draft for our group portfolios
-                logo. I wanted to show-off my group's passion in our works and
-                give the logo a vibe of unity that is why I gave the logo the
-                shape of a three-leaf clover and the color maroon with a slight
-                edgy creative design.
-              </p>
-              <a href="#" class="btn btn-primary stretched-link"
-                >Go to 'Tres Creative Studio'</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card bg-maroon border-0">
-            <img src="images/tres_v2.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Reserved</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque in nunc eu dui faucibus egestas convallis vitae
-                libero. Pellentesque in justo sed urna fringilla porttitor.
-              </p>
-              <a href="#" class="btn btn-primary stretched-link"
-                >Go somewhere</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card bg-maroon border-0">
-            <img src="images/tres_v2.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Latest Blog</h5>
-              <p class="card-text">A preview of my latest blog.</p>
-              <a href="#" class="btn btn-primary stretched-link"
-                >Go to 'latest blog'</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Footer-->
-    <p class="fw-light fs-6 text-center w-100 bg-navy mb-0 text-maroon">
-      <small>Copyright 2021. All Rights Reserved.</small>
-    </p>
-
+    <!--JavaScript for surprise-->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("waahh");
+        var y = document.getElementById("onetime");
+        x.removeAttribute("class", "invisible");
+        x.setAttribute("class", "img-fluid visible");
+        y.remove();
+      }
+    </script>
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
