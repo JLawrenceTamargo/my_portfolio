@@ -1,69 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: rgb(200, 148, 250);
-}
-
-.bg-purple {
-  background-color: purple;
-}
-
-.bg-violet {
-  background-color: violet;
-}
-
-.bg-cream {
-  background-color: #f9ecfd;
-}
-
-.text-cream {
-  color: #f9ecfd !important;
-}
-
-.text-maroon {
-  color: #dcf0f2;
-}
-nav a:hover {
-  background-color: #afc1d0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: purple;
-}
-
-.btn-submit {
-  font-weight: bold;
-  color: purple;
-  background-color: rgb(200, 148, 250);
-  box-shadow: 5px 5px 4px purple;
-}
-
-.btn-submit:hover {
-  color: rgb(200, 148, 250);
-  background-color: purple;
-  box-shadow: 5px 5px 4px rgb(200, 148, 250);
-}
-
-.m-50 {
-  margin-bottom: 50px;
-}
-.m-100 {
-  margin-bottom: 100px;
-}
-
-/*Calculator*/
-
 .compute {
-  background-color: pink;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 200px;
@@ -86,7 +21,7 @@ h6 {
   background-color: pink;
   border-radius: 3px;
   border: 1px solid #c4c4c4;
-  font-size: 18px;
+  font-size: 12px;
   color: #333;
   background-image: linear-gradient(
     to bottom,
@@ -125,10 +60,6 @@ h6 {
   color: #fff;
   height: 100%;
   grid-area: 2 / 4 / 6 / 5;
-}
-
-.img-pos {
-  justify-self: center;
 }
 
 .equal-sign:hover {

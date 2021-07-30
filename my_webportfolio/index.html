@@ -12,41 +12,46 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+
+    <!--For Custom CSS-->
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body data-bs-spy="scroll" data-bs-target="#menuNiLawrence">
     <nav
-      class="sticky-top navbar navbar-expand-md navbar-light bg-light"
+      class="sticky-top navbar navbar-expand-md navbar-light bg-purple"
       id="menuNiLawrence"
     >
       <div class="container d-flex justify-items-between">
-        <a class="navbar-brand" href="#home">JLawrence.Tamargo</a>
+        <a class="navbar-brand text-cream" href="#home">JLawrence.Tamargo</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
+          data-bs-target="#navbarport"
+          aria-controls="navbarport"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse" id="navbarport">
           <div class="navbar-nav">
-            <a class="nav-link" href="#home">Home</a>
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#project">Projects</a>
-            <a class="nav-link" href="#blog">Blogs</a>
-            <a class="nav-link" href="#contact">Contacts</a>
+            <a class="nav-link text-cream" href="#home">Home</a>
+            <a class="nav-link text-cream" href="#about">About</a>
+            <a class="nav-link text-cream" href="#project">Projects</a>
+            <a class="nav-link text-cream" href="#contact">Contacts</a>
           </div>
         </div>
       </div>
     </nav>
-    <div class="container-fluid" id="main">
-      <header class="row">
+    <div class="container-fluid py-5" id="main">
+      <header class="row" id="home">
         <div class="col d-flex justify-content-center">
-          <button onclick="myFunction()" class="lead rounded" id="onetime">
+          <button
+            onclick="myFunction()"
+            class="lead btn-submit rounded p-2"
+            id="onetime"
+          >
             <small>Click me.</small>
           </button>
         </div>
@@ -54,34 +59,350 @@
           <h1 class="text-center py-5">WELCOME</h1>
           <img
             src="/images/perfection.png"
-            class="img-fluid"
+            class="img-fluid rounded"
             alt="perfection"
           />
         </div>
       </header>
 
-      <section class="py-5" id="home"></section>
-      <section class="py-5" id="about">
-        <div class="row">
-          <div class="col">
-            <h1>About Me</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
-              lacinia est. Maecenas gravida, lacus ac pulvinar cursus, ipsum
-              sapien dapibus sem, nec pharetra arcu velit at libero. Nulla
-              ultrices eget risus nec congue. Nulla imperdiet sem sed ultrices
-              fringilla. Nulla facilisi. Mauris mattis diam.
-            </p>
-          </div>
-          <div class="col">
-            <img src="" alt="" />
+      <section class="py-5 my-5" id="about">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-6 align-self-center">
+              <h1>About Me</h1>
+              <p class="fs-4 lead text-cream">
+                Hi! My name is Jhon Lawrence Tamargo, a graduate of Bachelor in
+                Applied Statistics from Polytechnic University of the
+                Philippines. I am a former callcenter agent who is currently
+                studying web development under Kodego to shift carreer.
+              </p>
+            </div>
+            <div class="col-sm-8 col-md-6">
+              <img
+                src="/images/35298616_1898048080214236_7646140525413662720_n.jpg"
+                class="img-fluid border-2 rounded-circle"
+                alt="my_pic"
+              />
+            </div>
           </div>
         </div>
       </section>
-      <section id="project"></section>
-      <section id="blog"></section>
-      <section id="contact"></section>
+      <section class="py-5 my-5" id="project">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-8">
+              <h1 class="text-center">PROJECTS</h1>
+              <img src="/images/computer.jpg" class="img-fluid" alt="project" />
+            </div>
+          </div>
+
+          <div class="row py-5 justify-content-center">
+            <div class="col-sm-8 col-md-4">
+              <div>
+                <h2>My Personal Projects</h2>
+                <p class="fs-4 lead py-3 text-cream">
+                  Here are some of my personal projects:
+                </p>
+              </div>
+              <div>
+                <ul class="p-2 list-unstyled">
+                  <li class="my-2 fs-3">
+                    <a href="" class="text-decoration-none"
+                      >Javascript Calculator</a
+                    >
+                  </li>
+                  <li class="my-2 fs-3">
+                    <a href="" class="text-decoration-none">Clinical</a>
+                  </li>
+                  <li class="my-2 fs-3">
+                    <a href="" class="text-decoration-none"
+                      >My First Responsive Webpage</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-8 col-md-4">
+              <div>
+                <h2>My Group Projects</h2>
+                <p class="fs-4 lead py-3 text-cream">
+                  Here are some projects I am involved with:
+                </p>
+              </div>
+              <div>
+                <ul class="p-2 list-unstyled">
+                  <li class="my-2 fs-3">
+                    <a href="" class="text-decoration-none">Online Magazine</a>
+                  </li>
+                  <li class="my-2 fs-3">
+                    <a href="" class="text-decoration-none"
+                      >Tres Creative Studio</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row py-5 justify-content-center">
+            <div class="col-sm-4">
+              <h4 class="text-center">My Most Recent Project</h4>
+
+              <div class="container d-flex justify-content-center">
+                <div class="compute">
+                  <p class="fw-bold text-muted text-center my-1">
+                    <small>C A S O I</small>
+                  </p>
+                  <input
+                    type="text"
+                    class="screen rounded-pill m-2"
+                    value=""
+                    disabled
+                  />
+
+                  <div class="keys d-grid">
+                    <button
+                      type="button"
+                      class="ops btn-calc rounded-3"
+                      value="+"
+                    >
+                      +
+                    </button>
+                    <button
+                      type="button"
+                      class="ops btn-calc rounded-3"
+                      value="-"
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      class="ops btn-calc rounded-3"
+                      value="*"
+                    >
+                      &times;
+                    </button>
+                    <button
+                      type="button"
+                      class="ops btn-calc rounded-3"
+                      value="/"
+                    >
+                      &divide;
+                    </button>
+
+                    <button
+                      type="button"
+                      class="rounded-circle btn-calc"
+                      value="1"
+                    >
+                      1
+                    </button>
+                    <button
+                      type="button"
+                      class="rounded-circle btn-calc"
+                      value="2"
+                    >
+                      2
+                    </button>
+                    <button
+                      type="button"
+                      class="rounded-circle btn-calc"
+                      value="3"
+                    >
+                      3
+                    </button>
+
+                    <button
+                      type="button"
+                      class="rounded-circle btn-calc"
+                      value="4"
+                    >
+                      4
+                    </button>
+                    <button
+                      type="button"
+                      class="rounded-circle btn-calc"
+                      value="5"
+                    >
+                      5
+                    </button>
+                    <button
+                      type="button"
+                      class="rounded-circle btn-calc"
+                      value="6"
+                    >
+                      6
+                    </button>
+
+                    <button
+                      type="button"
+                      class="rounded-circle btn-calc"
+                      value="7"
+                    >
+                      7
+                    </button>
+                    <button
+                      type="button"
+                      class="rounded-circle btn-calc"
+                      value="8"
+                    >
+                      8
+                    </button>
+                    <button
+                      type="button"
+                      class="rounded-circle btn-calc"
+                      value="9"
+                    >
+                      9
+                    </button>
+
+                    <button
+                      type="button"
+                      class="rounded-circle btn-calc"
+                      value="0"
+                    >
+                      0
+                    </button>
+                    <button
+                      type="button"
+                      class="decimal rounded-circle btn-calc"
+                      value="."
+                    >
+                      .
+                    </button>
+                    <button
+                      type="button"
+                      class="delete rounded-3 btn-calc"
+                      value="delete"
+                    >
+                      AC
+                    </button>
+
+                    <button
+                      type="button"
+                      class="equal-sign ops rounded-3 btn-calc"
+                      value="="
+                    >
+                      =
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-5 m-100" id="contact">
+        <div class="container text-center py-3">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <h4>Contacts</h4>
+              <h1>FEEDBACK</h1>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <form>
+                <div class="row my-2">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="kiminonawa" class="form-label text-cream"
+                        >Your Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="kiminonawa"
+                        placeholder="ex.FirstName M.I. LastName"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="emairu" class="form-label text-cream"
+                        >Your Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="emairu"
+                        placeholder="ex.name@example.com"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="subject" class="form-label text-cream"
+                        >Subject</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="subject"
+                        placeholder="ex.Logo Design Inquiry"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="pnumber" class="form-label text-cream"
+                        >Phone</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="p-number"
+                        placeholder="ex.09991113333"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="messagetext" class="form-label text-cream"
+                        >Message</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="messagetext"
+                        rows="5"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-md-8">
+                    <button type="button" class="p-1 p-md-2 btn-submit rounded">
+                      SEND INQUIRY
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+    <div class="bg-violet p-4">
+      <div class="container m-50">
+        <div class="row">
+          <div class="col-sm-4">
+            <h5>My Contacts</h5>
+            <ul class="list-unstyled text-cream">
+              <li>Phone: 0966-440-8837</li>
+              <li>Email: tamargo1121@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="fixed-bottom bg-purple text-cream">
+      <p class="text-center lead">
+        Copyright 2021 by JLT. For study purpose only.
+      </p>
+    </footer>
     <!--JavaScript for surprise-->
     <script>
       function myFunction() {
@@ -91,6 +412,122 @@
         x.setAttribute("class", "img-fluid visible");
         y.remove();
       }
+    </script>
+    <!--JavaScrpit for Calculator-->
+    <script>
+      const compute = {
+        showvalue: "0",
+        first: null,
+        waitingForSecond: false,
+        ops: null,
+      };
+
+      function inputDigit(digit) {
+        const { showvalue, waitingForSecond } = compute;
+
+        if (waitingForSecond === true) {
+          compute.showvalue = digit;
+          compute.waitingForSecond = false;
+        } else {
+          compute.showvalue = showvalue === "0" ? digit : showvalue + digit;
+        }
+
+        console.log(compute);
+      }
+      function inputDecimal(dot) {
+        if (compute.waitingForSecond === true) {
+          compute.showvalue = "0.";
+          compute.waitingForSecond = false;
+          return;
+        }
+        if (!compute.showvalue.includes(dot)) {
+          compute.showvalue += dot;
+        }
+        console.log(compute);
+      }
+
+      function handle(nextOps) {
+        const { first, showvalue, ops } = compute;
+
+        const inputv = parseFloat(showvalue);
+
+        if (ops && compute.waitingForSecond) {
+          compute.ops = nextOps;
+          console.log(compute);
+          return;
+        }
+
+        if (first === null && !isNaN(inputv)) {
+          compute.first = inputv;
+        } else if (ops) {
+          const result = operate(first, inputv, ops);
+
+          compute.showvalue = String(result);
+          compute.first = result;
+        }
+
+        compute.waitingForSecond = true;
+        compute.ops = nextOps;
+        console.log(compute);
+      }
+
+      function operate(first, second, ops) {
+        if (ops === "+") {
+          return first + second;
+        } else if (ops === "-") {
+          return first - second;
+        } else if (ops === "*") {
+          return first * second;
+        } else if (ops === "/") {
+          return first / second;
+        }
+
+        return second;
+      }
+
+      function reset() {
+        compute.showvalue = "0";
+        compute.first = null;
+        compute.waitingForSecond = false;
+        compute.ops = null;
+        console.log(compute);
+      }
+
+      function updateDisplay() {
+        const display = document.querySelector(".screen");
+        display.value = compute.showvalue;
+      }
+
+      updateDisplay();
+
+      const keys = document.querySelector(".keys");
+      keys.addEventListener("click", (event) => {
+        const { target } = event;
+        if (!target.matches("button")) {
+          return;
+        }
+
+        if (target.classList.contains("ops")) {
+          handle(target.value);
+          updateDisplay();
+          return;
+        }
+
+        if (target.classList.contains("decimal")) {
+          inputDecimal(target.value);
+          updateDisplay();
+          return;
+        }
+
+        if (target.classList.contains("delete")) {
+          reset();
+          updateDisplay();
+          return;
+        }
+
+        inputDigit(target.value);
+        updateDisplay();
+      });
     </script>
     <!-- JavaScript Bundle with Popper -->
     <script
