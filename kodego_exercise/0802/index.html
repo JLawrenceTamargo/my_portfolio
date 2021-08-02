@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6-Javascript: Activity 1</title>
+  </head>
+  <body>
+    <form name="login" onsubmit="return validate()" method="POST">
+      <label for="user">Username:</label> <br />
+      <input type="text" id="user" placeholder="Enter Username" />
+      <br />
+      <label for="password">Password:</label> <br />
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        id="p-word"
+        placeholder="Enter Password"
+      />
+      <br />
+      <input type="submit" />
+
+      <br />
+      <br />
+      <br />
+
+      <input type="radio" name="index" value="0" required /><label for="index"
+        >Button 0</label
+      >
+      <br />
+      <input type="radio" name="index" value="1" /><label for="index"
+        >Button 1</label
+      >
+      <br />
+      <input type="radio" name="index" value="2" /><label for="index"
+        >Button 2</label
+      >
+      <br />
+      <input type="button" onclick="displayValue()" value="Get index" />
+      <br />
+      <br />
+      <br />
+
+      <input type="checkbox" name="terms" id="agree" required /><label
+        for="terms"
+        >Accept terms and agreement.</label
+      >
+      <br />
+      <input
+        type="button"
+        name="t-btn"
+        onclick="agreeProceed()"
+        value="Proceed"
+      />
+
+      <br />
+      <br />
+      <br />
+
+      <p>Check the symptoms you are currently experiencing:</p>
+      <input type="checkbox" name="symptoms" id="fever" value="fever" />
+      <label for="symptoms">fever</label> <br />
+      <input type="checkbox" name="symptoms" id="coughs" value="dry coughs" />
+      <label for="symptoms">dry coughs</label> <br />
+      <input type="checkbox" name="symptoms" id="colds" value="colds" />
+      <label for="symptoms">colds</label> <br />
+      <input type="checkbox" name="symptoms" id="tiredness" value="tiredness" />
+      <label for="symptoms">tiredness</label> <br />
+      <input
+        type="checkbox"
+        name="symptoms"
+        id="pains"
+        value="aches and pains"
+      />
+      <label for="symptoms">aches and pains</label> <br />
+      <input
+        type="checkbox"
+        name="symptoms"
+        id="soreThroat"
+        value="sore throat"
+      />
+      <label for="symptoms">sore throat</label> <br />
+      <input type="checkbox" name="symptoms" id="diarrhea" value="diarrhea" />
+      <label for="symptoms">diarrhea</label> <br />
+      <input type="checkbox" name="symptoms" id="headache" value="headache" />
+      <label for="symptoms">headache</label> <br />
+      <input
+        type="checkbox"
+        name="symptoms"
+        id="loss"
+        value="loss of taste or smell"
+      />
+      <label for="symptoms">loss of taste or smell</label> <br />
+      <input
+        type="checkbox"
+        name="symptoms"
+        id="breath"
+        value="shortness of breath"
+      />
+      <label for="symptoms">shortness of breath</label> <br />
+      <input
+        type="button"
+        name="covid"
+        id="covid-btn"
+        onclick="protocol()"
+        value="submit"
+      />
+      <p id="display-symptoms"></p>
+
+      <br /><br /><br />
+
+      <label for="pets">Choose your pets:</label>
+
+      <select id="pets" multiple="multiple">
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="rabbit">Rabbit</option>
+        <option value="parrot">Parrot</option>
+      </select>
+
+      <button id="submit">Get Selected Values</button>
+    </form>
+
+    <script>
+      function validate() {
+        let x = document.forms["login"]["user"].value;
+        let y = document.forms["login"]["p-word"].value;
+        let name = document.getElementById("user").value.trim();
+        let pass = document.getElementById("p-word").value.trim();
+        if ((x == "" && y == "") || (x == null && y == null)) {
+          alert("Please enter Username & Password");
+          return false;
+        } else if (y == "") {
+          alert("Please enter Password");
+          return false;
+        } else if (y.length < 6) {
+          alert("The password should be 6 characters or more.");
+          return false;
+        } else if (x == "") {
+          alert("Please enter Userame");
+          return false;
+        } else {
+          alert("You are now logged in " + name);
+        }
+        d;
+      }
+
+      function displayValue() {
+        let z = document.forms["login"]["index"].value;
+        if (z == "" || z == null) {
+          alert(`Please select an option.`);
+        } else {
+          alert(`You chose, ${z}.`);
+        }
+      }
+
+      function agreeProceed() {
+        const a = document.getElementById("agree");
+        if (a.checked == false) {
+          alert(`To proceed check the box.`);
+          return false;
+        } else {
+          alert(`You may now proceed`);
+        }
+      }
+
+      function selectBox() {
+        const checks = document.querySelectorAll(
+          `input[name="symptoms"]:checked`
+        );
+        let values = [];
+        checks.forEach((checkbox) => {
+          values.push(checkbox.value);
+        });
+        return values;
+      }
+      function protocol() {
+        if (selectBox().length === 0) {
+          alert(`No symptoms.`);
+        } else {
+          alert(`Your symptoms are ${selectBox().join(`, `)}.`);
+        }
+      }
+      /*select multiple */
+      document.getElementById("submit").onclick = function () {
+        var checked = document.querySelectorAll("#pets :checked");
+        var selected = [...checked].map((option) => option.value);
+        alert(selected);
+      };
+    </script>
+  </body>
+</html>

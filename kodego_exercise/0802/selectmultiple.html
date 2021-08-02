@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="pets">Choose your pets:</label>
+
+    <select id="pets" multiple="multiple">
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="rabbit">Rabbit</option>
+      <option value="parrot">Parrot</option>
+    </select>
+
+    <button id="submit">Get Selected Values</button>
+    <script>
+      /*select multiple */
+      /*for…of statement*/
+      document.getElementById("submit").onclick = function () {
+        var selected = [];
+        for (var option of document.getElementById("pets").options) {
+          if (option.selected) {
+            selected.push(option.value);
+          }
+        }
+        alert(selected);
+      };
+      /*Using filter() with map() function*/
+      document.getElementById("submit").onclick = function () {
+        var select = document.getElementById("pets");
+        var selected = [...select.options]
+          .filter((option) => option.selected)
+          .map((option) => option.value);
+        alert(selected);
+      };
+      /*selectedOptions property method*/
+      document.getElementById("submit").onclick = function () {
+        var select = document.getElementById("pets");
+        var selected = [...select.selectedOptions].map(
+          (option) => option.value
+        );
+        alert(selected);
+      };
+      /*querySelectorAll() method*/
+      document.getElementById("submit").onclick = function () {
+        var checked = document.querySelectorAll("#pets :checked");
+        var selected = [...checked].map((option) => option.value);
+        alert(selected);
+      };
+    </script>
+  </body>
+</html>
