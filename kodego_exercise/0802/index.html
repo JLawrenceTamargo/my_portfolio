@@ -8,7 +8,7 @@
   </head>
   <body>
     <form name="login" onsubmit="return validate()" method="POST">
-      <label for="user">Username:</label> <br />
+      <!-- <label for="user">Username:</label> <br />
       <input type="text" id="user" placeholder="Enter Username" />
       <br />
       <label for="password">Password:</label> <br />
@@ -57,49 +57,49 @@
 
       <br />
       <br />
-      <br />
+      <br /> -->
 
       <p>Check the symptoms you are currently experiencing:</p>
       <input type="checkbox" name="symptoms" id="fever" value="fever" />
-      <label for="symptoms">fever</label> <br />
+      <label for="fever">fever</label> <br />
       <input type="checkbox" name="symptoms" id="coughs" value="dry coughs" />
-      <label for="symptoms">dry coughs</label> <br />
+      <label for="coughs">dry coughs</label> <br />
       <input type="checkbox" name="symptoms" id="colds" value="colds" />
-      <label for="symptoms">colds</label> <br />
+      <label for="colds">colds</label> <br />
       <input type="checkbox" name="symptoms" id="tiredness" value="tiredness" />
-      <label for="symptoms">tiredness</label> <br />
+      <label for="tiredness">tiredness</label> <br />
       <input
         type="checkbox"
         name="symptoms"
         id="pains"
         value="aches and pains"
       />
-      <label for="symptoms">aches and pains</label> <br />
+      <label for="pains">aches and pains</label> <br />
       <input
         type="checkbox"
         name="symptoms"
         id="soreThroat"
         value="sore throat"
       />
-      <label for="symptoms">sore throat</label> <br />
+      <label for="soreThroat">sore throat</label> <br />
       <input type="checkbox" name="symptoms" id="diarrhea" value="diarrhea" />
       <label for="symptoms">diarrhea</label> <br />
       <input type="checkbox" name="symptoms" id="headache" value="headache" />
-      <label for="symptoms">headache</label> <br />
+      <label for="headache">headache</label> <br />
       <input
         type="checkbox"
         name="symptoms"
         id="loss"
         value="loss of taste or smell"
       />
-      <label for="symptoms">loss of taste or smell</label> <br />
+      <label for="loss">loss of taste or smell</label> <br />
       <input
         type="checkbox"
         name="symptoms"
         id="breath"
         value="shortness of breath"
       />
-      <label for="symptoms">shortness of breath</label> <br />
+      <label for="breath">shortness of breath</label> <br />
       <input
         type="button"
         name="covid"
@@ -107,64 +107,75 @@
         onclick="protocol()"
         value="submit"
       />
+      <br />
+      <!-- select all -->
+      <input
+        type="checkbox"
+        name="selectAll"
+        id="selectAll"
+        value="selectAll"
+      />
+      <label for="selectAll">SelectAll</label> <br />
+      <input
+        type="button"
+        name="save"
+        id="save-btn"
+        onclick="saveReport()"
+        value="Save"
+      />
+      <br />
+      <textarea
+        name="printout"
+        id="sypmtomsPrint"
+        rows="10"
+        cols="30"
+      ></textarea>
+
       <p id="display-symptoms"></p>
-
-      <br /><br /><br />
-
-      <label for="pets">Choose your pets:</label>
-
-      <select id="pets" multiple="multiple">
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
-        <option value="rabbit">Rabbit</option>
-        <option value="parrot">Parrot</option>
-      </select>
-
-      <button id="submit">Get Selected Values</button>
     </form>
 
     <script>
-      function validate() {
-        let x = document.forms["login"]["user"].value;
-        let y = document.forms["login"]["p-word"].value;
-        let name = document.getElementById("user").value.trim();
-        let pass = document.getElementById("p-word").value.trim();
-        if ((x == "" && y == "") || (x == null && y == null)) {
-          alert("Please enter Username & Password");
-          return false;
-        } else if (y == "") {
-          alert("Please enter Password");
-          return false;
-        } else if (y.length < 6) {
-          alert("The password should be 6 characters or more.");
-          return false;
-        } else if (x == "") {
-          alert("Please enter Userame");
-          return false;
-        } else {
-          alert("You are now logged in " + name);
-        }
-        d;
-      }
+      // function validate() {
+      //   let x = document.forms["login"]["user"].value;
+      //   let y = document.forms["login"]["p-word"].value;
+      //   let name = document.getElementById("user").value.trim();
+      //   let pass = document.getElementById("p-word").value.trim();
+      //   if ((x == "" && y == "") || (x == null && y == null)) {
+      //     alert("Please enter Username & Password");
+      //     return false;
+      //   } else if (y == "") {
+      //     alert("Please enter Password");
+      //     return false;
+      //   } else if (y.length < 6) {
+      //     alert("The password should be 6 characters or more.");
+      //     return false;
+      //   } else if (x == "") {
+      //     alert("Please enter Userame");
+      //     return false;
+      //   } else {
+      //     alert("You are now logged in " + name);
+      //   }
+      //   d;
+      // }
 
-      function displayValue() {
-        let z = document.forms["login"]["index"].value;
-        if (z == "" || z == null) {
-          alert(`Please select an option.`);
-        } else {
-          alert(`You chose, ${z}.`);
-        }
-      }
+      // function displayValue() {
+      //   let z = document.forms["login"]["index"].value;
+      //   if (z == "" || z == null) {
+      //     alert(`Please select an option.`);
+      //   } else {
+      //     alert(`You chose, ${z}.`);
+      //   }
+      // }
 
-      function agreeProceed() {
-        const a = document.getElementById("agree");
-        if (a.checked == false) {
-          alert(`To proceed check the box.`);
-          return false;
-        } else {
-          alert(`You may now proceed`);
-        }
-      }
+      // function agreeProceed() {
+      //   const a = document.getElementById("agree");
+      //   if (a.checked == false) {
+      //     alert(`To proceed check the box.`);
+      //     return false;
+      //   } else {
+      //     alert(`You may now proceed`);
+      //   }
+      // }
 
       function selectBox() {
         const checks = document.querySelectorAll(
@@ -179,16 +190,30 @@
       function protocol() {
         if (selectBox().length === 0) {
           alert(`No symptoms.`);
+        } else if (selectBox().length === 1) {
+          alert(`Your symptom is ${selectBox()}`);
         } else {
           alert(`Your symptoms are ${selectBox().join(`, `)}.`);
         }
       }
-      /*select multiple */
-      document.getElementById("submit").onclick = function () {
-        var checked = document.querySelectorAll("#pets :checked");
-        var selected = [...checked].map((option) => option.value);
-        alert(selected);
+      // for select all
+      document.getElementById("selectAll").onclick = function () {
+        var boxes = document.querySelectorAll('input[name="symptoms"]');
+        for (var checkbox of boxes) {
+          checkbox.checked = this.checked;
+        }
       };
+      // for displaying in text-area
+      function saveReport() {
+        const txtArea = document.getElementById("sypmtomsPrint");
+        if (selectBox().length === 0) {
+          txtArea.innerHTML = `No symptoms`;
+        } else if (selectBox().length === 1) {
+          txtArea.innerHTML = `Your symptom is ${selectBox()}`;
+        } else {
+          txtArea.innerHTML = `Your symptoms are ${selectBox().join(`, `)}.`;
+        }
+      }
     </script>
   </body>
 </html>

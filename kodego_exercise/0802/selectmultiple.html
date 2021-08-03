@@ -27,30 +27,38 @@
             selected.push(option.value);
           }
         }
-        alert(selected);
+        if (selected.length == 0) {
+          alert(`Please select a pet`);
+          return false;
+        } else if (selected.length == 1) {
+          alert(`You chose a ` + selected);
+        } else {
+          alert(`You have chosen ` + `a ${selected.join(`, a `)}` + `.`);
+        }
+        return true;
       };
       /*Using filter() with map() function*/
-      document.getElementById("submit").onclick = function () {
-        var select = document.getElementById("pets");
-        var selected = [...select.options]
-          .filter((option) => option.selected)
-          .map((option) => option.value);
-        alert(selected);
-      };
+      // document.getElementById("submit").onclick = function () {
+      //   var select = document.getElementById("pets");
+      //   var selected = [...select.options]
+      //     .filter((option) => option.selected)
+      //     .map((option) => option.value);
+      //   alert(`You have chosen ` + `a ${selected.join(`, a `)}` + `.`);
+      // };
       /*selectedOptions property method*/
-      document.getElementById("submit").onclick = function () {
-        var select = document.getElementById("pets");
-        var selected = [...select.selectedOptions].map(
-          (option) => option.value
-        );
-        alert(selected);
-      };
+      // document.getElementById("submit").onclick = function () {
+      //   var select = document.getElementById("pets");
+      //   var selected = [...select.selectedOptions].map(
+      //     (option) => option.value
+      //   );
+      //   alert(`You have chosen ` + `a ${selected.join(`, a `)}` + `.`);
+      // };
       /*querySelectorAll() method*/
-      document.getElementById("submit").onclick = function () {
-        var checked = document.querySelectorAll("#pets :checked");
-        var selected = [...checked].map((option) => option.value);
-        alert(selected);
-      };
+      // document.getElementById("submit").onclick = function () {
+      //   var checked = document.querySelectorAll("#pets :checked");
+      //   var selected = [...checked].map((option) => option.value);
+      //   alert(`You have chosen ` + `a ${selected.join(`, a `)}` + `.`);
+      // };
     </script>
   </body>
 </html>
