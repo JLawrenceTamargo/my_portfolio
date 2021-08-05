@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function library(libraryid, bookname, author, yearpublished, isRead) {
+        this.libraryid = libraryid;
+        this.bookname = bookname;
+        this.author = author;
+        this.yearpublished = yearpublished;
+        this.isRead = isRead;
+        this.catalog = function () {
+          return `${this.libraryid} Title: <b>${this.bookname}</b>, Author: ${this.author}, Year: ${this.yearpublished}.`;
+        };
+        this.readyes = function () {
+          if (this.isRead == true)
+            return `I have read the following books: ${this.isRead}`;
+        };
+      }
+      //catalog
+      let id = Date.now();
+      let library1 = new library(
+        id,
+        "Real Men Are Pogi",
+        "Ardy ROberto",
+        "2000",
+        true
+      );
+      let library2 = new library(
+        id + 1,
+        "The Design of Everyday Things",
+        "Don Norman",
+        "1900",
+        false
+      );
+      let library3 = new library(
+        id + 2,
+        "The Hobbit",
+        "JRR Tolkien",
+        "1995",
+        true
+      );
+      let library4 = new library(
+        id + 3,
+        "Steve Jobs",
+        "Walter Isaacson",
+        "2001",
+        true
+      );
+      let library5 = new library(
+        id + 4,
+        "Mockingjay",
+        "Suzanne Collins",
+        "2015",
+        false
+      );
+
+      let section = [
+        library1.catalog(),
+        library2.catalog(),
+        library3.catalog(),
+        library4.catalog(),
+        library5.catalog(),
+      ];
+
+      section.sort((a, b) => a - b);
+      document.write(section);
+    </script>
+  </body>
+</html>

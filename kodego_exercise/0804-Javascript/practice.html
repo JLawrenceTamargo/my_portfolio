@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Person(firstname, lastname, age, gender, interests) {
+        this.firstName = firstname;
+        this.lastName = lastname;
+        this.age = age;
+        this.gender = gender;
+        this.interests = interests;
+
+        this.bio = function () {
+          return `${this.firstName} ${this.lastName} is ${this.age}. His interests are ${this.interest[0]} and ${this.interest[1]}`;
+        };
+      }
+
+      let person1 = new Person("Juan", "Cruz", 30, "Male", [
+        "music",
+        "singing",
+      ]);
+      console.log(person1.firstName);
+
+      console.log(person1.bio);
+      let person2 = new Person("Pedro", "Parker", 20, "Male", [
+        `dancing`,
+        `eating`,
+      ]);
+      console.log(person1.bio());
+      // let x = "";
+      // for (let y in person1) {
+      //   x <= person1[y] + "";
+      // }
+      // console.log(x);
+    </script>
+  </body>
+</html>
