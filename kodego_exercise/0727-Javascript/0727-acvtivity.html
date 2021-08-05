@@ -7,8 +7,7 @@
     <title>JS Events</title>
   </head>
   <body>
-    <!--This is event samples-->
-
+    This is event samples
     <form action="">
       <input
         type="button"
@@ -49,6 +48,18 @@
       }
 
       alert(greeting);
+
+      function employee(id, fname, lname, salary) {
+        this.id = id;
+        this.fname = fname;
+        this.lname = lname;
+        this.salary = salary;
+      }
+
+      emp = new employee(101, `Juan`, `Cruz`, 40000);
+      document.write(
+        emp.id + " " + emp.fname + " " + emp.lname + " " + emp.salary
+      );
     </script>
   </body>
 </html>

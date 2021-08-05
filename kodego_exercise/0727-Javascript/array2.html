@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Add Items
+    <form>
+      <input type="text" id="text1" />
+      <input type="button" id="buttonadd" value="add" onclick="Addarray()" />
+      <input
+        type="button"
+        id="buttondisplay"
+        value="display"
+        onclick="Displayarray()"
+      />
+    </form>
+    <div id="result"></div>
+    <script>
+      const varray = new Array();
+      let x = 0;
+
+      function Addarray() {
+        varray[x] = document.getElementById("text1").value;
+        alert(`${varray[x]} has been added`);
+        x++;
+      }
+      function Displayarray() {
+        let d = "";
+        for (i = 0; i < varray.length; i++) {
+          d += `element ${i}= ${varray[i]} <br>`;
+        }
+        document.getElementById("result").innerHTML = d;
+      }
+    </script>
+  </body>
+</html>

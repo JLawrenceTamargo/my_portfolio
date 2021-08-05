@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document.getELementbyID</title>
+  </head>
+  <body>
+    <form>
+      Enter Value 1 <input type="text" id="val1" value="" /> <br />
+      Enter Value 2 <input type="text" id="val2" value="" /> <br />
+      <button onclick="getAdd()">Click To Add</button><br />
+    </form>
+    <p id="result"></p>
+    <script>
+      function getAdd() {
+        const num1 = Number(document.getElementById("val1").value);
+        const num2 = Number(document.getElementById("val2").value);
+        const add = num1 + num2;
+
+        document.getElementById("result").innerHTML = "Addition : " + add;
+        document.getElementById("result").style.color = "red";
+      }
+    </script>
+  </body>
+</html>

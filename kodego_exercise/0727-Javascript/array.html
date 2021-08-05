@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="menu"></h1>
+    <h2 id="view"></h2>
+
+    <script>
+      const recipe = {
+        title: "adobo",
+        serving: 30,
+        ingredients: [`pork`, `garlic`, `oil`, `soy sauce`],
+      };
+
+      document.getElementById("menu").innerHTML = `ULAM KO AY ${recipe.title}`;
+      document.getElementById("view").innerHTML = `servings: ${recipe.serving}`;
+
+      for (j = 0; j < recipe.ingredients.length; j++) {
+        document.write(`${j + 1}.${recipe.ingredients[j]} <br>`);
+      }
+
+      //Array
+      var fruits = ["Banana", "Apple", "Grapes"];
+      for (i = 0; i < fruits.length; i++) {
+        document.write(`<li> ${fruits[i]}<br>`);
+      }
+    </script>
+  </body>
+</html>
