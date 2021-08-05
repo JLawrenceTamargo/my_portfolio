@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container my-5 login">
+      <div class="row d-grid align-items-center justify-content-center">
+        <div class="col">
+          <form id="loginForm">
+            <label for="user">Username:</label>
+            <input
+              type="text"
+              id="userName"
+              name="user"
+              placeholder="Enter valid username."
+            />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="passWord"
+              name="password"
+              placeholder="Enter password."
+            />
+            <input
+              type="button"
+              name="submit"
+              onclick="loginVerification()"
+              id="toPatientForm"
+              value="Login"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function loginVerification() {
+        const x = document.getElementById("userName").value;
+        const y = document.getElementById("passWord").value;
+        let yength = y.length;
+        if (x == 0 || x == null) {
+          alert(`Please enter username.`);
+          return false;
+        } else if (y == 0 || y == null) {
+          alert(`Please enter password.`);
+          return false;
+        } else if ((x == 0 || x == null) && yength < 6) {
+          alert(
+            `Please enter username. <br> Password length should 6+ characters long.`
+          );
+          return false;
+        } else if (yength < 6) {
+          alert(`Password length should 6+ characters long.`);
+          return false;
+        } else {
+          alert(`Login successful`);
+          window.location.href = "patientform.html";
+          return true;
+        }
+      }
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

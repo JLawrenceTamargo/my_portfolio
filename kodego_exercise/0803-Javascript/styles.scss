@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row {
+  height: 60vh;
+  .col {
+    height: 300px;
+    width: 400px;
+    background-color: violet;
+    form {
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      margin-top: 50px;
+      label {
+        color: rgb(94, 45, 94);
+        font-weight: bold;
+      }
+      input {
+        height: 40px;
+        width: 300px;
+      }
+      input#toPatientForm {
+        color: rgb(94, 45, 94);
+        font-weight: bold;
+        height: 40px;
+        width: 100px;
+        margin-top: 20px;
+        justify-self: center;
+      }
+    }
+  }
+}

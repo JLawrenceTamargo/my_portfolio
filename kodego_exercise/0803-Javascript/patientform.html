@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Form</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/patientstyles.css" />
+  </head>
+  <body>
+    <div class="container my-5 login">
+      <div class="row d-grid align-items-center justify-content-center">
+        <div class="col">
+          <h4 class="text-center">Patient Details</h4>
+          <form id="patientForm" name="patientForm">
+            <div class="row mt-4">
+              <div class="col-4">
+                <label for="fname" class="form-label">First name:</label>
+                <input
+                  class="form-control"
+                  name="fname"
+                  id="firstn"
+                  type="text"
+                  placeholder="Enter First name."
+                />
+                <small id="fn" class="text-danger"
+                  >First name is required</small
+                >
+              </div>
+              <div class="col-4">
+                <label for="mname" class="form-label">Middle name:</label>
+                <input
+                  class="form-control"
+                  name="mname"
+                  id="middlen"
+                  type="text"
+                  placeholder="Enter Middle name."
+                />
+                <small class="text-danger" id="midname"
+                  >Middle name is required.</small
+                >
+              </div>
+              <div class="col-4">
+                <label for="lname" class="form-label">Last name:</label>
+                <input
+                  class="form-control"
+                  name="lname"
+                  id="lastn"
+                  type="text"
+                  placeholder="Enter Last name."
+                />
+                <small id="lastname" class="text-danger"
+                  >Last name is required</small
+                >
+              </div>
+            </div>
+            <div class="row my-4">
+              <div class="col-4">
+                <label for="bday" class="form-label">Birth date:</label>
+                <input
+                  class="form-control"
+                  name="bday"
+                  id="birthd"
+                  type="date"
+                  min="1920-01-01"
+                />
+                <small id="birthError" class="text-danger"></small>
+              </div>
+              <div class="col-4">
+                <label class="form-label" for="gender">Gender:</label> <br />
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                  /><label class="form-check-label" for="genMale"> Male </label>
+                  <br />
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                  /><label class="form-check-label" for="genFemale">
+                    Female
+                  </label>
+                </div>
+                <small id="genderr" class="text-danger">Select gender.</small>
+              </div>
+              <div class="col-4">
+                <label for="contacts" class="form-label">Contacts:</label>
+                <input
+                  class="form-control"
+                  name="contacts"
+                  id="contactNum"
+                  type="text"
+                  placeholder="ex.09221114444"
+                  pattern="[0][9][0-9]{9}"
+                  minlength="11"
+                  maxlength="11"
+                />
+                <small id="errnum" class="text-danger"></small>
+              </div>
+            </div>
+            <div class="row my-4">
+              <div class="col">
+                <label for="medHistory">Medical History</label>
+                <div class="container">
+                  <div class="row mt-1">
+                    <div class="col-4 form-check">
+                      <!-- asthma -->
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        name="medHistory"
+                        id="asthma"
+                      />
+                      <label for="asthma" class="form-check-label"
+                        >Asthma</label
+                      >
+                      <br />
+                      <!-- cancer -->
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        name="medHistory"
+                        id="cancer"
+                      />
+                      <label for="cancer" class="form-check-label"
+                        >Cancer</label
+                      >
+                      <br />
+                      <!-- caradiac disease -->
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        name="medHistory"
+                        id="cardiacD"
+                      />
+                      <label for="cardiacD" class="form-check-label"
+                        >Caradiac Disease</label
+                      >
+                    </div>
+                    <div class="col-4">
+                      <!-- diabetes -->
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        name="medHistory"
+                        id="diabetes"
+                      />
+                      <label for="diabetes" class="form-check-label"
+                        >Diabetes</label
+                      ><br />
+                      <!-- hypertension -->
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        name="medHistory"
+                        id="hypertension"
+                      />
+                      <label for="hypertension" class="form-check-label"
+                        >Hypertension</label
+                      ><br />
+                      <!-- psychiatric disorder -->
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        name="medHistory"
+                        id="psychDisorder"
+                      />
+                      <label for="psychDisorder" class="form-check-label"
+                        >Psychiatric Disorder</label
+                      >
+                    </div>
+                    <div class="col-4">
+                      <!-- epilepsy -->
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        name="medHistory"
+                        id="epilepsy"
+                      />
+                      <label for="epilepsy" class="form-check-label"
+                        >Epilepsy</label
+                      >
+                      <br />
+                      <!-- Select-all -->
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        name="medHistory"
+                        id="selectAll"
+                      />
+                      <label for="selectAll" class="form-check-label"
+                        >Select All</label
+                      >
+                    </div>
+                    <small id="MHError" class="text-danger"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-4">
+              <div class="col-7">
+                <label for="symptoms" class="form-label">
+                  Select the symptoms you are currently experiencing:
+                </label>
+                <select class="form-select" id="symptoms" size="4" multiple>
+                  <option value="Chest pain">Chest pain</option>
+                  <option value="Respiratory">Respiratory</option>
+                  <option value="Hematological">Hematological</option>
+                  <option value="Lymphatic">Lymphatic</option>
+                  <option value="Neurological">Neurological</option>
+                  <option value="Psychiatric Disorder">
+                    Psychiatric Disorder
+                  </option>
+                  <option value="epilepsy">Epilepsy</option>
+                </select>
+                <small id="errorsimp" class="text-danger"></small>
+              </div>
+              <div class="col-5">
+                <label for="medications" class="form-label">
+                  Are you currently taking any medication?
+                </label>
+                <div class="row form-check">
+                  <div class="col">
+                    <input
+                      type="radio"
+                      name="medications"
+                      id="yesh"
+                      value="Yes"
+                    />
+                    <label for="yesh" class="form-check-label">Yes</label>
+                  </div>
+                  <div class="col">
+                    <input
+                      type="radio"
+                      name="medications"
+                      id="nope"
+                      value="No"
+                    />
+                    <label for="nope" class="form-check-label">No</label>
+                  </div>
+                </div>
+                <small id="ynerror" class="text-danger"
+                  >Please select yes or no.</small
+                >
+              </div>
+            </div>
+            <div class="row my-4">
+              <div class="col">
+                <label for="medsDetails" class="form-label"
+                  >Specify medication/s being taken:</label
+                >
+                <textarea
+                  name="medsDetails"
+                  id="medDets"
+                  class="w-100"
+                  cols="30"
+                  rows="10"
+                  disabled
+                ></textarea>
+                <small id="meddeterror" class="text-danger"
+                  >This is required.</small
+                >
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col d-flex justify-content-center gap-2">
+                <input
+                  type="button"
+                  onclick="validate()"
+                  value="Submit"
+                  class="btn btn-primary"
+                />
+                <button type="button" onclick="reset()" class="btn btn-danger">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // for submit validation
+      let a = document.getElementById("firstn").value;
+      let b = document.getElementById("middlen").value;
+      let c = document.getElementById("lastn").value;
+      let d = document.getElementById("birthd").value;
+      let e = document.getElementsByName("gender");
+      let f = document.getElementById("contactNum");
+      let g = document.getElementsByName("medHistory").checked;
+      let h = document.getElementsByTagName("option").checked;
+      let i = document.getElementsByName("medications").value;
+      let j = document.getElementById("medDets").value;
+      let form = document.getElementById("patientForm");
+
+      function validate() {
+        if (a == "" || a == nul) {
+          document.getElementById("fn").style.visibility = "visible";
+        }
+        if (b == "" || b == null) {
+          document.getElementById("midname").style.visibility = "visible";
+        }
+        if (c == "" || c == null) {
+          document.getElementById("lastname").style.visibility = "visible";
+        }
+        if (d == "" || d == null) {
+          document.getElementById("birthError").style.visibility = "visible";
+          document.getElementById("birthError").innerText =
+            "Birth date is required.";
+        }
+        if (d == today) {
+          document.getElementById("birthError").style.visibility = "visible";
+          document.getElementById("birthError").innerText =
+            "Birth date should be not greater than present.";
+        }
+        if (!e[0].checked == true && !e[1].checked == true) {
+          document.getElementById("genderr").style.visibility = "visible";
+        }
+        if (f.value == "" || f.value == null) {
+          document.getElementById("errnum").style.visibility = "visible";
+          document.getElementById("errnum").innerText =
+            "Please enter contact number.";
+        } else if (f.length == 11) {
+          document.getElementById("errnum").style.visibility = "visible";
+          document.getElementById("errnum").innerText =
+            "Contact number should be exactly 11 digits.";
+        } else {
+          alert("Successfully submitted");
+        }
+        e.preventDefault();
+      }
+
+      // for contacts
+      let time = new Date();
+      let today = time.toLocaleDateString();
+      document.getElementById("birthd").setAttribute("max", `${today}`);
+      // for medication yes
+      document.getElementById("yesh").onclick = function () {
+        var txtmed = document.getElementById("medDets");
+        txtmed.removeAttribute("disabled");
+      };
+      // for medication no, if yes was selected first.
+      document.getElementById("nope").onclick = function () {
+        var txtmed = document.getElementById("medDets");
+        txtmed.setAttribute("disabled", "true");
+      };
+
+      // for select all
+      document.getElementById("selectAll").onclick = function () {
+        var boxes = document.querySelectorAll('input[name="medHistory"]');
+        for (var checkbox of boxes) {
+          checkbox.checked = this.checked;
+        }
+      };
+
+      // for reset
+      function reset() {
+        document.getElementById("patientForm").reset();
+      }
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
