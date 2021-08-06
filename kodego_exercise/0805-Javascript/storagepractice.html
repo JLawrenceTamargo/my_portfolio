@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="title">Movie</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Movie Title"
+        required
+      />
+
+      <label for="yr">Year</label>
+      <input type="number" name="yr" id="yr" placeholder="Year" required />
+      <br />
+      <label for="review">Review</label>
+      <br />
+      <textarea
+        name="review"
+        id="review"
+        cols="59"
+        rows="10"
+        required
+      ></textarea>
+      <br />
+      <button id="btn">Add Review</button>
+      <button>Submit</button>
+      <!--display in tabular form-->
+      <button id="btn2">Generate Report</button>
+    </form>
+
+    <div id="display">
+      <!--for json stringify dispaly-->
+      <pre></pre>
+    </div>
+    <table id="movieDisplay" style="width: 70%; border: 1px solid black">
+      <tr>
+        <th>ID</th>
+        <th>MOVIE TITLE</th>
+        <th>YEAR</th>
+        <th>MOVIE REVIEWS</th>
+      </tr>
+    </table>
+    <script>
+      let moviereviews = [];
+      const addMovieReview = (ev) => {
+        ev.preventDefault; //to prevent the form from submitting
+        let moviereview = {
+          id: Date.now(), //for auto ID
+          title: document.getElementById("title").value,
+          review: document.getElementById("review").value,
+          year: document.getElementById("yr").value,
+        };
+        moviereviews.push(moviereview);
+        document.querySelector("form").reset(); // to clear the form for the next entries (alt document.forms[0].reset())
+        console.log(moviereviews); // or use console.table to display in tbaular form
+        console.table(moviereviews);
+        let displaymovie = document.querySelector("#display pre"); // display result in div
+        displaymovie.innerHTML = JSON.stringify(moviereviews, null, 2);
+        localStorage.setItem("moviereviews", JSON.stringify(moviereviews));
+      };
+      document.addEventListener("DOMContentLoaded", () => {
+        //DOMContentLoaded Web API event complete load
+        document
+          .getElementById("btn")
+          .addEventListener("click", addMovieReview);
+        document
+          .getElementById("btn2")
+          .addEventListener("click", displayMovieReview);
+      });
+      function displayMovieReview(ev) {
+        ev.preventDefault;
+        let arr1 = new Array();
+
+        arr1 = JSON.parse(localStorage.getItem("moviereviews"));
+        // alert(arr1.length);
+
+        //create table row
+        let table = document.getElementById("movieDisplay");
+        for (var i = 0; i < arr1.length; i++) {
+          let r = table.insertRow();
+          let td1 = r.insertCell();
+          let td2 = r.insertCell();
+          let td3 = r.insertCell();
+          let td4 = r.insertCell();
+          td1.innerHTML = arr1[i].id;
+          td2.innerHTML = arr1[i].title;
+          td3.innerHTML = arr1[i].year;
+          td4.innerHTML = arr1[i].review;
+        }
+        localStorage.clear();
+        moviereviews.length = 0;
+      }
+    </script>
+  </body>
+</html>

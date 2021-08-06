@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="productName">Product Name:</label>
+      <input
+        type="text"
+        id="product"
+        name="productName"
+        placeholder="Enter product name"
+      />
+      <br />
+      <label for="productprice">Bid price:</label>
+      <input
+        type="number"
+        id="price"
+        name="productprice"
+        min="0"
+        placeholder="Enter digits only."
+      />
+      <br />
+      <label for="bidAmount">Quantity</label>
+      <input
+        type="number"
+        name="bidAmount"
+        id="quantity"
+        min="0"
+        max="10"
+        placeholder="max(10)"
+      />
+      <br />
+      <button id="btn">Add to Cart</button>
+      <button id="btn2">Proceed to Checkout</button>
+    </form>
+
+    <table id="CartDisplay" style="width: 100%; border: 1px solid black">
+      <tr>
+        <th>ID</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Base Price</th>
+        <th>Total Product Price</th>
+      </tr>
+    </table>
+    <label for="totAmount">Total:</label>
+    <input type="number" id="totAmount" disabled />
+    <script>
+      const time = Date.now();
+      let cartCheckOut = [];
+      const checkout = (ev) => {
+        ev.preventDefault();
+        let cartcheckout = {
+          id: time - 11,
+          product: document.getElementById("product").value,
+          bprice: document.getElementById("price").value,
+          quantity: document.getElementById("quantity").value,
+        };
+        cartCheckOut.push(cartcheckout);
+        document.querySelector("form").reset();
+        localStorage.setItem("cartCheckOut", JSON.stringify(cartCheckOut));
+        console.table(cartCheckOut);
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        //DOMContentLoaded Web API event complete load
+        document.getElementById("btn").addEventListener("click", checkout);
+      });
+      document
+        .getElementById("btn2")
+        .addEventListener("click", displayBidRequest);
+      function displayBidRequest(ev) {
+        ev.preventDefault();
+        let bidItem = new Array();
+
+        bidItem = JSON.parse(localStorage.getItem("cartCheckOut"));
+        // alert(arr1.length);
+
+        //create table row
+        let table = document.getElementById("CartDisplay");
+        let total = 0;
+        for (var i = 0; i < bidItem.length; i++) {
+          let r = table.insertRow();
+          let cell1 = r.insertCell();
+          let cell2 = r.insertCell();
+          let cell3 = r.insertCell();
+          let cell4 = r.insertCell();
+          let cell5 = r.insertCell();
+          cell1.innerHTML = bidItem[i].id;
+          cell2.innerHTML = bidItem[i].product;
+          cell3.innerHTML = bidItem[i].bprice;
+          cell4.innerHTML = bidItem[i].quantity;
+          let totalbprice =
+            parseFloat(bidItem[i].bprice) * parseFloat(bidItem[i].quantity);
+          cell5.innerHTML = totalbprice;
+
+          total = total + totalbprice;
+
+          document
+            .getElementById("totAmount")
+            .setAttribute("value", `${total}`);
+        }
+        localStorage.clear();
+        cartCheckOut.length = 0;
+      }
+    </script>
+  </body>
+</html>
