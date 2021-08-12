@@ -4,11 +4,13 @@
 hr {
   clear: both;
 }
-
-img {
+body {
+  background-color: #282c34;
+}
+/* img {
   width: 100%;
   height: 250px;
-}
+} */
 
 .App {
   text-align: center;
@@ -26,8 +28,7 @@ img {
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,8 +53,11 @@ img {
 header,
 footer {
   text-align: center;
-  background-color: black;
   color: antiquewhite;
+}
+footer {
+  align-items: flex-end;
+  min-height: 10vh;
 }
 
 img {
